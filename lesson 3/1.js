@@ -11,9 +11,6 @@ const matrix = [
 
 const matrixArray = [[1, 5, 9, 8, 7], [8, 8, 9, 7, 8], [2, 6, 6, 6, 5]];
 
-
-
-
 function mergeArr(arr) {
     const newArr = [];
     let count = 0;

@@ -13,15 +13,15 @@ const matrix = [
 const matrixArray = [[1, 5, 9, 8, 7], [8, 8, 9, 7, 8], [2, 6, 6, 6, 5]];
 
 function findMin(arr) {
-    const minima = [];
+    const minimal = [];
 
     for (let i = 0; i < matrix.length; i++) {
         const row = matrix[i];
         const minValue = Math.min(...row);
-        minima.push(minValue);
+        minimal.push(minValue);
     }
 
-    return minima;
+    return minimal;
 }
 
 console.log(findMin(matrix))
