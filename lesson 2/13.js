@@ -1,55 +1,52 @@
 function myUnshift(array, ...elements) {
-    return [...elements, ...array];
+  return [...elements, ...array];
 }
 
 function myShift(array) {
-    if (array.length === 0) {
-        return undefined;
-    }
-    const shiftedElement = array[0];
-    const newArray = [];
-    for (let i = 1; i < array.length; i++) {
-        newArray.push(array[i]);
-    }
-    return { shiftedElement, newArray };
+  if (array.length === 0) {
+    return undefined;
+  }
+  const shiftedElement = array[0];
+  const newArray = [];
+  shiftedElement;
+  return { shiftedElement, newArray };
 }
 
-
 function myPop(array) {
-    if (array.length === 0) {
-        return undefined;
-    }
-    const poppedElement = array[array.length - 1];
-    const newArray = [];
-    for (let i = 0; i < array.length - 1; i++) {
-        myPush(newArray,array[i])
-    }
-    return { poppedElement, newArray };
+  if (array.length === 0) {
+    return undefined;
+  }
+  const poppedElement = array[array.length - 1];
+  const newArray = [];
+  for (let i = 0; i < array.length - 1; i++) {
+    myPush(newArray, array[i]);
+  }
+  return { poppedElement, newArray };
 }
 
 function myPush(array, ...elements) {
-    return [...array, ...elements];
+  return [...array, ...elements];
 }
 
 function myForEach(array, callback) {
-    for (let i = 0; i < array.length; i++) {
-        callback(array[i], i, array);
-    }
+  for (let i = 0; i < array.length; i++) {
+    callback(array[i], i, array);
+  }
 }
 
 function myFindIndex(array, callback) {
-    for (let i = 0; i < array.length; i++) {
-        if (callback(array[i], i, array)) {
-            return i;
-        }
+  for (let i = 0; i < array.length; i++) {
+    if (callback(array[i], i, array)) {
+      return i;
     }
+  }
 }
 
 function myFind(array, callback) {
-    for (let i = 0; i < array.length; i++) {
-        if (callback(array[i], i, array)) {
-            return array[i];
-        }
+  for (let i = 0; i < array.length; i++) {
+    if (callback(array[i], i, array)) {
+      return array[i];
     }
-    return undefined; 
+  }
+  return undefined;
 }
